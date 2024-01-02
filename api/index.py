@@ -12,12 +12,12 @@ import zipfile
 
 
 with zipfile.ZipFile('api/sentiment_model/saved_models/sentiment.zip', 'r') as zip_ref:
-    zip_ref.extractall('sentiment_model/saved_models')
+    zip_ref.extractall('api/sentiment_model/saved_models')
 
 app = Flask(__name__)
 CORS(app)
 
-model = keras.models.load_model('sentiment_model/saved_models/sentiment.keras')
+model = keras.models.load_model('api/sentiment_model/saved_models/sentiment.keras')
 
 
 @app.route("/")
