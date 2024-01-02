@@ -11,13 +11,13 @@ from sentiment_model.preprocessing.data_loader import DataLoader
 import zipfile
 
 
-with zipfile.ZipFile('api/sentiment_model/saved_models/sentiment.zip', 'r') as zip_ref:
-    zip_ref.extractall('api/sentiment_model/saved_models')
+with zipfile.ZipFile('sentiment_model/saved_models/sentiment.zip', 'r') as zip_ref:
+    zip_ref.extractall('sentiment_model/saved_models')
 
 app = Flask(__name__)
 CORS(app)
 
-model = keras.models.load_model('api/sentiment_model/saved_models/sentiment.keras')
+model = keras.models.load_model('sentiment_model/saved_models/final.keras')
 
 
 @app.route("/")
@@ -73,3 +73,7 @@ def get_image(ticker: str):
             json.dump(final_dict, f)
 
         return jsonify(final_dict)
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
