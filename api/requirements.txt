@@ -395,7 +395,6 @@ watchdog @ file:///C:/ci_311/watchdog_1676457923624/work
 wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
 webencodings==0.5.1
 websocket-client @ file:///C:/ci_311/websocket-client_1676426063281/work
-Werkzeug==3.0.1
 whatthepatch @ file:///C:/ci_311/whatthepatch_1678402578113/work
 widgetsnbextension @ file:///C:/b/abs_882k4_4kdf/croot/widgetsnbextension_1679313880295/work
 win-inet-pton @ file:///C:/ci_311/win_inet_pton_1676425458225/work
